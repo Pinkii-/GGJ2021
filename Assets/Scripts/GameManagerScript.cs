@@ -150,7 +150,7 @@ public class GameManagerScript : MonoBehaviour
                 if (string.IsNullOrEmpty(newText))
                 {
                     messages.Remove(item);
-                    //TODO reset message item visual feedback and state
+                    messageItemScript.ResetToDefault();
                 }
                 else
                 {
@@ -165,7 +165,6 @@ public class GameManagerScript : MonoBehaviour
                 if (!string.IsNullOrEmpty(text))
                 {
                     AddMessage(messageItemScript, text);
-                    // TODO change message item to written
                     messageItemScript.MarkAsWritten();
                 }
             });
@@ -177,7 +176,6 @@ public class GameManagerScript : MonoBehaviour
         var item = messages.Find(message => message.Item == messageItemScript && !readMessages.Contains(message));
         if (item != null)
         {
-            // Mark message as read
             readMessages.Add(item);
             m_MessageUI.InitAsReadableNote(item.m_MessageText, _ =>
             {
