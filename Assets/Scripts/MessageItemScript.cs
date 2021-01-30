@@ -17,10 +17,11 @@ public class MessageItemScript : MonoBehaviour
     private MessageItemState m_state;
     private GameObject m_child;
 
+    public string itemSound;
+
     public MessageItemState State
     {
         get { return m_state; }
-        //set { state = value; }
     }
 
     void Awake()
@@ -58,7 +59,6 @@ public class MessageItemScript : MonoBehaviour
         // TEMP
         m_child.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }
-
 
     public void InCrosshair() 
     {
@@ -107,6 +107,8 @@ public class MessageItemScript : MonoBehaviour
             case MessageItemState.ReadHighlight:
             case MessageItemState.ReadMessage: // TIP: remove this state to prevent opening already read messages
                 GameManagerScript.gameManagerRef.OnItemClicked(this);
+                if(itemSound != null && itemSound != "")
+                    AudioManager.audioManagerRef.PlaySound(itemSound);
                 break;
             default:
                 break;

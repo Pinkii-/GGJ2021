@@ -45328,6 +45328,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1451052780602066527, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
+      propertyPath: itemSound
+      value: ButtonClick
+      objectReference: {fileID: 0}
     - target: {fileID: 2781508750523922642, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
       propertyPath: m_Name
       value: PrefabsReady
