@@ -44110,15 +44110,7 @@ PrefabInstance:
     - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 978332524}
-    - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
-      propertyPath: m_PlaneDistance
-      value: 0.35
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1288490478}
     - target: {fileID: 4529150800084444793, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Name
       value: CanvasUI
@@ -44147,11 +44139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72c114dbcb3bb449939f554586f2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!20 &978332524 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 291059112976551141, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
-  m_PrefabInstance: {fileID: 1913394527}
-  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1106859508
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -44559,7 +44546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1288490477
 AudioListener:
   m_ObjectHideFlags: 0
@@ -44619,7 +44606,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288490476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 33.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44640,7 +44627,7 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
+  m_CameraType: 1
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -45140,10 +45127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
-    - target: {fileID: 291059112982615845, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
+    - target: {fileID: 291059112975075426, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+      propertyPath: m_Cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 1288490478}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
 --- !u!114 &1913394528 stripped
@@ -45328,21 +45315,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1451052780602066527, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: itemSound
-      value: ButtonClick
-      objectReference: {fileID: 0}
-    - target: {fileID: 2114124006183689134, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: itemSound
-      value: GlassBottle
-      objectReference: {fileID: 0}
     - target: {fileID: 2781508750523922642, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
       propertyPath: m_Name
       value: PrefabsReady
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781508750523922642, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2781508750523922643, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
       propertyPath: m_RootOrder
@@ -45387,18 +45362,6 @@ PrefabInstance:
     - target: {fileID: 2781508750523922643, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2781508750725760931, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6815292116479143741, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: itemSound
-      value: Glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 8322682862904499936, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
-      propertyPath: itemSound
-      value: Glass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fe5aae04b6a81418f0f7ff8c623790, type: 3}
