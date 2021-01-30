@@ -16,12 +16,13 @@ public class MessageItemScript : MonoBehaviour
 
     private MessageItemState state;
 
-    public GameObject item;
-
     public MessageItemState State
     {
         get { return state; }
+        set { state = value; }
     }
+
+    public GameObject item;
 
     // Start is called before the first frame update
     void Start()
