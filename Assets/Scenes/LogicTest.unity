@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a04bea8dd9e2c48a380c47c89ec0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MessageUI: {fileID: 0}
 --- !u!4 &503260409
 Transform:
   m_ObjectHideFlags: 0
@@ -480,7 +481,7 @@ LightingSettings:
   m_BounceScale: 1
   m_AlbedoBoost: 2.92
   m_IndirectOutputScale: 2.76
-  m_UsingShadowmask: 1
+  m_UsingShadowmask: 0
   m_BakeBackend: 1
   m_LightmapMaxSize: 1024
   m_BakeResolution: 40
@@ -491,7 +492,7 @@ LightingSettings:
   m_CompAOExponent: 1
   m_CompAOExponentDirect: 0
   m_ExtractAO: 0
-  m_MixedBakeMode: 2
+  m_MixedBakeMode: 1
   m_LightmapsBakeMode: 1
   m_FilterMode: 1
   m_LightmapParameters: {fileID: 0}
