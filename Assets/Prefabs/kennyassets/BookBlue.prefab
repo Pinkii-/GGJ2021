@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: book-closed-blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1406736954355838, guid: 6e921a223e8d72c40877f55e10e6017d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4411124178289476, guid: 6e921a223e8d72c40877f55e10e6017d, type: 3}
       propertyPath: m_RootOrder
       value: 0

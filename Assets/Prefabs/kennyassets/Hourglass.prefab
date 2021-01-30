@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hourglass
       objectReference: {fileID: 0}
+    - target: {fileID: 6044866755642746571, guid: bef584d445058ad46abaf52ebda6524c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef584d445058ad46abaf52ebda6524c, type: 3}
 --- !u!4 &1929426721564574291 stripped
