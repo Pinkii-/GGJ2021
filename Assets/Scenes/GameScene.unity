@@ -44069,6 +44069,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2291706180720427727, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_Crosshair
+      value: 
+      objectReference: {fileID: 1913394528}
+    - target: {fileID: 2291706180720427727, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_PersonController
       value: 
       objectReference: {fileID: 205155812}
@@ -45105,6 +45109,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+--- !u!114 &1913394528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 291059112975075425, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+  m_PrefabInstance: {fileID: 1913394527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00940f6002e2cb64f8455c938ab11ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2138566582
 Mesh:
   m_ObjectHideFlags: 0
