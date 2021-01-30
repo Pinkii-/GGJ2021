@@ -39,14 +39,12 @@ namespace SceneManagement
 
         private void SetFindMode(string password)
         {
-            //TODO: Set find mode to the manager
-            // GameManagerScript.gameManagerRef.
+            GameManagerScript.gameManagerRef.StartReadMode(password);
         }
         
         private void SetWriteMode()
         {
-            //TODO: set write mode to the manager
-            // GameManagerScript.gameManagerRef.
+            GameManagerScript.gameManagerRef.StartWriteMode();
         }
     }
 }

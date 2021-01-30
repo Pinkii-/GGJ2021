@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,10 +35,12 @@ public class GameManagerScript : MonoBehaviour
         readMessages = new List<MessageScript>();
     }
 
-    public void StartReadMode()
+    public void StartReadMode(string password)
     {
         mode = GameManagerMode.ReadMode;
+        InitMessagesFromPassword(password);
     }
+
     public void StartWriteMode()
     {
         mode = GameManagerMode.WriteMode;
@@ -76,7 +79,39 @@ public class GameManagerScript : MonoBehaviour
         readMessages.Clear();
 
     }
-
+    
+    private const string MESSAGE_SEPARATOR = "omegalol";
+    private const string FIELD_SEPARATOR = "hajaxa";
+    
+    
     // TODO: Get all messages in the needed structure for creating the QR code
+    private string GeneratePasswordFromMessages()
+    {
+        var password = "";
+
+        foreach (var message in messages)
+        {
+            password += message.creationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.messageText + MESSAGE_SEPARATOR;
+        }
+        
+        return password;
+    }
+    
     // TODO: Populate messages when reading
+    private void InitMessagesFromPassword(string password)
+    {
+        string[] rawMessages = password.Split(new string[] {MESSAGE_SEPARATOR}, StringSplitOptions.None);
+
+        foreach (var rawMessage in rawMessages)
+        {
+            string[] messageContent = rawMessage.Split(new string[] {FIELD_SEPARATOR}, StringSplitOptions.None);
+
+            int creationOrder = int.Parse(messageContent[0]);
+            var itemName = messageContent[1];
+            var messageText = messageContent[2];
+            
+            //TODO: Generate message
+            Debug.Log(creationOrder + " " + itemName + " " + messageText);
+        }
+    }
 }
