@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GameplayUI;
@@ -15,8 +14,8 @@ public class GameManagerScript : MonoBehaviour
     }
 
     [Header("References")] 
-    [SerializeField] private MessageUI m_MessageUI;
-    
+    [SerializeField] private GameplayUiController m_GameplaUiController;
+
     private GameManagerMode mode;
     // list of messages
     private List<MessageScript> messages;
@@ -56,6 +55,8 @@ public class GameManagerScript : MonoBehaviour
         MessageScript m = new MessageScript(item, messageText, messages.Count);
 
         messages.Add(m);
+        
+        m_GameplaUiController.OnAmountOfMemoriesChange(messages.Count);
     }
 
     public void RemoveMessage(MessageItemScript item)
@@ -67,12 +68,20 @@ public class GameManagerScript : MonoBehaviour
         {
             if (m.GetItemName() == itemName)
             {
-                messages.Remove(m);
+                RemoveItem(m);
                 Debug.Log("Message related to item " + itemName + " has been deleted.");
                 break;
             }
         }
         Debug.LogWarning("There's no message attached to item " + itemName + ". No deletion is posssible.");
+    }
+    
+    private void RemoveItem(MessageScript item)
+    {
+        messages.Remove(item);
+        readMessages.Remove(item);
+        
+        m_GameplaUiController.OnAmountOfMemoriesChange(messages.Count);
     }
 
     public void ResetManager()
@@ -80,13 +89,13 @@ public class GameManagerScript : MonoBehaviour
         mode = GameManagerMode.Default;
         messages.Clear();
         readMessages.Clear();
-
+        m_GameplaUiController.OnAmountOfMemoriesChange(messages.Count);
     }
     
     private const string MESSAGE_SEPARATOR = "omegalol";
     private const string FIELD_SEPARATOR = "hajaxa";
     
-    private string GeneratePasswordFromMessages()
+    public string GeneratePasswordFromMessages()
     {
         var password = "";
 
@@ -145,11 +154,12 @@ public class GameManagerScript : MonoBehaviour
         var item = messages.Find((message => message.Item == messageItemScript));
         if (item != null)
         {
-            m_MessageUI.InitAsWritableNote(item.m_MessageText, (newText) =>
+            m_GameplaUiController.RequestWritableMessageUi(item.m_MessageText, (newText) =>
             {
                 if (string.IsNullOrEmpty(newText))
                 {
-                    messages.Remove(item);
+                    RemoveItem(item);
+                    messageItemScript.ResetToDefault();
                 }
                 else
                 {
@@ -159,11 +169,12 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-            m_MessageUI.InitAsWritableNote("", text =>
+            m_GameplaUiController.RequestWritableMessageUi("", text =>
             {
                 if (!string.IsNullOrEmpty(text))
                 {
                     AddMessage(messageItemScript, text);
+                    messageItemScript.MarkAsWritten();
                 }
             });
         }
@@ -175,19 +186,14 @@ public class GameManagerScript : MonoBehaviour
         if (item != null)
         {
             readMessages.Add(item);
-            m_MessageUI.InitAsReadableNote(item.m_MessageText, _ =>
+            m_GameplaUiController.RequestReadableMessageUi(item.m_MessageText, _ =>
             {
-                MarkMessageAsReaded(item);
+                messageItemScript.MarkAsRead(true);
             });
         }
         else
         {
-            //TODO: disable the click for this items (?)
+            messageItemScript.MarkAsRead(false);
         }
-    }
-
-    private void MarkMessageAsReaded(MessageScript item)
-    {
-        //TODO: implement
     }
 }

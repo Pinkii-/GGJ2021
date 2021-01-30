@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CrosshairScript : MonoBehaviour
 {
-    public float RaycastDistance = 3.5f;
+    private MessageItemScript itemInCrosshair;
+
+    public float RaycastDistance = 3.8f;
     public Camera FPSCamera;
 
     private void Awake()
@@ -42,13 +44,46 @@ public class CrosshairScript : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(FPSCamera.transform.position, FPSCamera.transform.forward, out hit, RaycastDistance, layerMask))
         {
+            MessageItemScript item = hit.transform.parent.GetComponent<MessageItemScript>();
+
+            if (item == null) 
+            {
+                Debug.LogWarning("Item " + hit.transform.parent + " is in the message item layer but it doesn't have a  MessageItemScript attached. Please, fix it!");
+                return;
+            }
+
+            // If a new item is crosshairs, we remove the old one and tell it we are no longer looking at it
+            if (item != itemInCrosshair) 
+            {
+                if(itemInCrosshair != null)
+                    itemInCrosshair.OutCrosshair();
+                item.InCrosshair();
+                itemInCrosshair = item;
+            }
+
             Debug.DrawRay(FPSCamera.transform.position, FPSCamera.transform.forward * hit.distance, Color.green);
             //Debug.Log("Did Hit");
         }
         else
         {
+            if (itemInCrosshair != null)
+                itemInCrosshair.OutCrosshair();
+            itemInCrosshair = null;
+            
             Debug.DrawRay(FPSCamera.transform.position, FPSCamera.transform.forward * 1000, Color.red);
             //Debug.Log("Did not Hit");
         }
+
+        // Clicked or pressed E
+        if (Input.GetAxis("Fire1") > 0f)
+        {
+            if (itemInCrosshair != null)
+                itemInCrosshair.Selected();
+        }
+    }
+
+    public void Reset()
+    {
+        itemInCrosshair = null;
     }
 }
