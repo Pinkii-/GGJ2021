@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &7802442384665319864
-MeshCollider:
+--- !u!65 &1551268426105000583
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,10 +10,22 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6550830294480196477, guid: 915ded4ba4f6cd744966265a0196f90e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.8627985, y: 0.98, z: 0.25}
+  m_Center: {x: 0.50242484, y: 1.32, z: 0.83}
+--- !u!65 &4847291395197036611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118187151283966529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8627985, y: 0.88, z: 0.82057035}
+  m_Center: {x: 0.50242484, y: 0.39, z: 0.43942901}
 --- !u!1 &7916631648330211487
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
 --- !u!64 &60750889516626914
 MeshCollider:
   m_ObjectHideFlags: 0
