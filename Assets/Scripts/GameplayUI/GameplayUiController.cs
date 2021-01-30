@@ -77,5 +77,13 @@ namespace GameplayUI
             m_PersonController.enabled = b;
             m_Crosshair.enabled = b;
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf)
+            {
+                OpenQrPopup();
+            }
+        }
     }
 }
