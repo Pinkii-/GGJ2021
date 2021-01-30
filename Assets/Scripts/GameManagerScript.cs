@@ -16,7 +16,7 @@ public class GameManagerScript : MonoBehaviour
 
     [Header("References")] 
     [SerializeField] private MessageUI m_MessageUI;
-    
+
     private GameManagerMode mode;
     // list of messages
     private List<MessageScript> messages;
