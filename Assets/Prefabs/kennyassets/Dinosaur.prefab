@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stegosaurus
       objectReference: {fileID: 0}
+    - target: {fileID: 1843080922423118, guid: cb7410ed189ae444f9afc02cce9731d0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4870505815114812, guid: cb7410ed189ae444f9afc02cce9731d0, type: 3}
       propertyPath: m_RootOrder
       value: 0

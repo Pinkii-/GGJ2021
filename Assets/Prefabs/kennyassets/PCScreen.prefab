@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: computerScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61a69dcb000a46744a2e8b0cbb2045cf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61a69dcb000a46744a2e8b0cbb2045cf, type: 3}
 --- !u!1 &8761416734059534147 stripped

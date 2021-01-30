@@ -114,6 +114,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: _upThea
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efed5c38d6f6b074483001ba216bb221, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566767547146459770, guid: efed5c38d6f6b074483001ba216bb221, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efed5c38d6f6b074483001ba216bb221, type: 3}
 --- !u!1 &9026994543854223452 stripped

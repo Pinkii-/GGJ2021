@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guitar-electric-rock
       objectReference: {fileID: 0}
+    - target: {fileID: 3295190841378901949, guid: 446c08c8b89a4bc47bd35d5f9320bff5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3295190841379066781, guid: 446c08c8b89a4bc47bd35d5f9320bff5, type: 3}
       propertyPath: m_RootOrder
       value: 0

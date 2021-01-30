@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: picture-frame
       objectReference: {fileID: 0}
+    - target: {fileID: 1360803820172768, guid: d4667e17b0c824aa1bffbe52c32d5543, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4827684823679328, guid: d4667e17b0c824aa1bffbe52c32d5543, type: 3}
       propertyPath: m_RootOrder
       value: 0
