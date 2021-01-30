@@ -6,7 +6,7 @@ public class CrosshairScript : MonoBehaviour
 {
     private MessageItemScript itemInCrosshair;
 
-    public float RaycastDistance = 3.5f;
+    public float RaycastDistance = 3.8f;
     public Camera FPSCamera;
 
     private void Awake()

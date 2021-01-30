@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using GameplayUI;
@@ -86,7 +85,7 @@ public class GameManagerScript : MonoBehaviour
     private const string MESSAGE_SEPARATOR = "omegalol";
     private const string FIELD_SEPARATOR = "hajaxa";
     
-    private string GeneratePasswordFromMessages()
+    public string GeneratePasswordFromMessages()
     {
         var password = "";
 

@@ -14,61 +14,65 @@ public class MessageItemScript : MonoBehaviour
         ReadMessage
     }
 
-    private MessageItemState state;
+    private MessageItemState m_state;
+    private GameObject m_child;
 
     public MessageItemState State
     {
-        get { return state; }
+        get { return m_state; }
         //set { state = value; }
     }
 
-    public GameObject item;
+    void Awake()
+    {
+        m_child = transform.GetChild(0).gameObject;
+    }
 
     private void removeEffects()
     {
         // TODO TEMP
-        transform.localScale = new Vector3(1f, 1f, 1f);
+        m_child.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     private void addReadHighlightEffect()
     {
         // TODO TEMP
-        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        m_child.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
     }
 
     private void addWriteHighlightEffect()
     {
         // TODO TEMP
-        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        m_child.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
     }
 
     private void addReadEffect()
     {
         // TODO add the read highlight if ReadMessage. Golden?
         // TEMP
-        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        m_child.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }
     private void addWrittenEffect()
     {
         // TODO add the read highlight. Golden?
         // TEMP
-        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        m_child.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
     }
 
 
     public void InCrosshair() 
     {
-        switch (state)
+        switch (m_state)
         {
             case MessageItemState.Default :
                 switch (GameManagerScript.gameManagerRef.Mode)
                 {
                     case GameManagerScript.GameManagerMode.ReadMode:
-                        state = MessageItemState.ReadHighlight;
+                        m_state = MessageItemState.ReadHighlight;
                         addReadHighlightEffect();
                         break;
                     case GameManagerScript.GameManagerMode.WriteMode:
-                        state = MessageItemState.WriteHighlight;
+                        m_state = MessageItemState.WriteHighlight;
                         addWriteHighlightEffect();
                         break;
                     default:
@@ -82,11 +86,11 @@ public class MessageItemScript : MonoBehaviour
 
     public void OutCrosshair()
     {
-        switch (state)
+        switch (m_state)
         {
             case MessageItemState.ReadHighlight:
             case MessageItemState.WriteHighlight:
-                state = MessageItemState.Default;
+                m_state = MessageItemState.Default;
                 removeEffects();
                 break;
             default:
@@ -96,7 +100,7 @@ public class MessageItemScript : MonoBehaviour
 
     public void Selected()
     {
-        switch (state)
+        switch (m_state)
         {
             case MessageItemState.WriteHighlight:
             case MessageItemState.Written: // TIP: remove this state to prevent opening already written messages
@@ -113,10 +117,10 @@ public class MessageItemScript : MonoBehaviour
     {
         if (hasMessage)
         {
-            state = MessageItemState.ReadMessage;
+            m_state = MessageItemState.ReadMessage;
         }
         else
-            state = MessageItemState.ReadEmpty; // Dead end for this message item
+            m_state = MessageItemState.ReadEmpty; // Dead end for this message item
 
         removeEffects();
         addReadEffect();
@@ -124,14 +128,14 @@ public class MessageItemScript : MonoBehaviour
 
     public void MarkAsWritten()
     {
-        state = MessageItemState.Written;
+        m_state = MessageItemState.Written;
         removeEffects();
         addWrittenEffect();
     }
 
     public void ResetToDefault()
     {
-        state = MessageItemState.Default;
+        m_state = MessageItemState.Default;
         removeEffects();
     }
 }
