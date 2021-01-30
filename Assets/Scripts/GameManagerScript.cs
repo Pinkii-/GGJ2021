@@ -14,7 +14,7 @@ public class GameManagerScript : MonoBehaviour
     }
 
     [Header("References")] 
-    [SerializeField] private MessageUI m_MessageUI;
+    [SerializeField] private GameplayUiController m_GameplaUiController;
 
     private GameManagerMode mode;
     // list of messages
@@ -144,7 +144,7 @@ public class GameManagerScript : MonoBehaviour
         var item = messages.Find((message => message.Item == messageItemScript));
         if (item != null)
         {
-            m_MessageUI.InitAsWritableNote(item.m_MessageText, (newText) =>
+            m_GameplaUiController.RequestWritableMessageUi(item.m_MessageText, (newText) =>
             {
                 if (string.IsNullOrEmpty(newText))
                 {
@@ -159,7 +159,7 @@ public class GameManagerScript : MonoBehaviour
         }
         else
         {
-            m_MessageUI.InitAsWritableNote("", text =>
+            m_GameplaUiController.RequestWritableMessageUi("", text =>
             {
                 if (!string.IsNullOrEmpty(text))
                 {
@@ -176,7 +176,7 @@ public class GameManagerScript : MonoBehaviour
         if (item != null)
         {
             readMessages.Add(item);
-            m_MessageUI.InitAsReadableNote(item.m_MessageText, _ =>
+            m_GameplaUiController.RequestReadableMessageUi(item.m_MessageText, _ =>
             {
                 messageItemScript.MarkAsRead(true);
             });
