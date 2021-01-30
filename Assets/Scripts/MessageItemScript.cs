@@ -24,17 +24,37 @@ public class MessageItemScript : MonoBehaviour
 
     public GameObject item;
 
-    // Start is called before the first frame update
-    void Start()
+    private void removeEffects()
     {
-        
+        // TODO TEMP
+        transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void addReadHighlightEffect()
     {
-        
+        // TODO TEMP
+        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
     }
+
+    private void addWriteHighlightEffect()
+    {
+        // TODO TEMP
+        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+    }
+
+    private void addReadEffect()
+    {
+        // TODO add the read highlight if ReadMessage. Golden?
+        // TEMP
+        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    }
+    private void addWrittenEffect()
+    {
+        // TODO add the read highlight. Golden?
+        // TEMP
+        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    }
+
 
     public void InCrosshair() 
     {
@@ -45,15 +65,11 @@ public class MessageItemScript : MonoBehaviour
                 {
                     case GameManagerScript.GameManagerMode.ReadMode:
                         state = MessageItemState.ReadHighlight;
-                        // TODO: Add read highlight effect
-                        // TEMP
-                        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+                        addReadHighlightEffect();
                         break;
                     case GameManagerScript.GameManagerMode.WriteMode:
                         state = MessageItemState.WriteHighlight;
-                        // TODO: Add write highlight effect
-                        // TEMP
-                        transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+                        addWriteHighlightEffect();
                         break;
                     default:
                         break;
@@ -71,12 +87,9 @@ public class MessageItemScript : MonoBehaviour
             case MessageItemState.ReadHighlight:
             case MessageItemState.WriteHighlight:
                 state = MessageItemState.Default;
-                // TODO: remove highlight effect
-                // TEMP
-                transform.localScale = new Vector3(1f, 1f, 1f);
+                removeEffects();
                 break;
             default:
-                // TODO: anything?
                 break;
         }
     }
@@ -89,7 +102,6 @@ public class MessageItemScript : MonoBehaviour
             case MessageItemState.Written: // TIP: remove this state to prevent opening already written messages
             case MessageItemState.ReadHighlight:
             case MessageItemState.ReadMessage: // TIP: remove this state to prevent opening already read messages
-                // Notify the Game Manager
                 GameManagerScript.gameManagerRef.OnItemClicked(this);
                 break;
             default:
@@ -99,27 +111,27 @@ public class MessageItemScript : MonoBehaviour
 
     public void MarkAsRead(bool hasMessage)
     {
-
         if (hasMessage)
         {
             state = MessageItemState.ReadMessage;
         }
         else
-            state = MessageItemState.ReadEmpty; // Dead end for this item
+            state = MessageItemState.ReadEmpty; // Dead end for this message item
 
-        // TODO remove the current highlight effect.
-        // TEMP
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        // TODO add the read highlight if ReadMessage. Golden?
+        removeEffects();
+        addReadEffect();
     }
 
     public void MarkAsWritten()
     {
         state = MessageItemState.Written;
+        removeEffects();
+        addWrittenEffect();
+    }
 
-        // TODO remove the current highlight effect.
-        // TEMP
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        // TODO add the read highlight. Golden?
+    public void ResetToDefault()
+    {
+        state = MessageItemState.Default;
+        removeEffects();
     }
 }
