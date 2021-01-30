@@ -38,9 +38,6 @@ public class GameManagerScript : MonoBehaviour
         mode = GameManagerMode.Default;
         messages = new List<MessageScript>();
         readMessages = new List<MessageScript>();
-
-        // TEMP TODO DELETE
-        mode = GameManagerMode.WriteMode;
     }
 
     public void StartReadMode(string password)
