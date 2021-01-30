@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Networking;
+using ZXing;
 
 public class LoadFile : MonoBehaviour
 {
@@ -44,7 +45,19 @@ public class LoadFile : MonoBehaviour
             }
             else {
                 //Apply texture to specific material slot
-                renderer.materials[i].mainTexture = DownloadHandlerTexture.GetContent(www);
+                var texture = DownloadHandlerTexture.GetContent(www);
+                renderer.materials[i].mainTexture = texture;
+                
+                IBarcodeReader barcodeReader = new BarcodeReader();
+                var result = barcodeReader.Decode(texture.GetPixels32(), texture.width, texture.height);
+                
+                if (result != null) {
+                    Debug.Log("DECODED TEXT FROM QR: " + result.Text);
+                }
+                else
+                {
+                    Debug.Log("A iorar");
+                }
             }
         }
     }
