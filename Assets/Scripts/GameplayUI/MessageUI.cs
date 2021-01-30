@@ -40,7 +40,7 @@ namespace GameplayUI
         {
             // TODO: Animation? sound?
             
-            m_OnSaveButtonClicked?.Invoke(m_InputField.text);
+            m_OnSaveButtonClicked?.Invoke(m_InputField.text.Trim(' ', '\r', '\n'));
         }
 
         private void Update()
