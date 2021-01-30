@@ -17,6 +17,7 @@ namespace GameplayUI
             m_InputField.text = originalContent;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
             gameObject.SetActive(true);
+            m_InputField.Select();
         }
 
         public void InitAsReadableNote(string content, Action<string> onSubmitButtonClicked)
@@ -25,6 +26,7 @@ namespace GameplayUI
             m_InputField.text = content;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
             gameObject.SetActive(true);
+            m_InputField.Select();
         }
         
         public void OnCancelButtonPressed()
@@ -45,11 +47,11 @@ namespace GameplayUI
         {
             if (m_InputField.isFocused) return;
 
-            if (Input.GetKey(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 OnCancelButtonPressed();
             }
-            else if (Input.GetKey(KeyCode.Return))
+            else if (Input.GetKeyDown(KeyCode.Return))
             {
                 OnSaveButtonPressed();
             }
