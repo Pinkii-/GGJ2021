@@ -40024,6 +40024,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4580001, y: 3.0285962, z: 0.2673}
   m_Center: {x: 0.72900003, y: 1.5142981, z: 0.13365}
+--- !u!114 &205155812 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 291059112969042725, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+  m_PrefabInstance: {fileID: 1913394527}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335445381
 GameObject:
   m_ObjectHideFlags: 0
@@ -44057,6 +44068,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2291706180720427727, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_PersonController
+      value: 
+      objectReference: {fileID: 205155812}
     - target: {fileID: 4529150800084444789, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -44141,6 +44156,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 978332524}
+    - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529150800084444790, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4529150800084444793, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Name
       value: CanvasUI
@@ -44158,6 +44185,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04eaa9d0004a67e4b84bd1d2310f6e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &954992190 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2291706180720427727, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+  m_PrefabInstance: {fileID: 954992188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72c114dbcb3bb449939f554586f2507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &978332524 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 291059112976551141, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+  m_PrefabInstance: {fileID: 1913394527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1106859508
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -44895,6 +44938,10 @@ PrefabInstance:
       propertyPath: m_MessageUI
       value: 
       objectReference: {fileID: 954992189}
+    - target: {fileID: 6950072161859644453, guid: 4add0f58e89a4dd49a6dd75416800c31, type: 3}
+      propertyPath: m_GameplaUiController
+      value: 
+      objectReference: {fileID: 954992190}
     - target: {fileID: 6950072161859644458, guid: 4add0f58e89a4dd49a6dd75416800c31, type: 3}
       propertyPath: m_Name
       value: GameManager
