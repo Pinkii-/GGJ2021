@@ -35,7 +35,17 @@ namespace GameplayUI
         public void RequestReadableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
             SetGameplayUi(false);
-            m_MessageUI.InitAsReadableNote(originalContent, onSubmitButtonClicked, () => m_MessageUI.gameObject.SetActive(false));
+            m_MessageUI.InitAsReadableNote(originalContent, 
+                (password) =>
+                {
+                    onSubmitButtonClicked.Invoke(password);
+                    m_MessageUI.gameObject.SetActive(false);
+                    SetGameplayUi(true);
+                }, () =>
+                {
+                    m_MessageUI.gameObject.SetActive(false);
+                    SetGameplayUi(true);
+                });
             m_MessageUI.gameObject.SetActive(true);
         }
 
