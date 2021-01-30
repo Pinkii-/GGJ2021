@@ -80,7 +80,7 @@ namespace GameplayUI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf && m_SendButton.activeSelf)
             {
                 OpenQrPopup();
             }
