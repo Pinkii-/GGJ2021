@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
@@ -48,9 +49,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void AddMessage(MessageItemScript item, string messageText) 
     {
-        MessageScript m = new MessageScript();
-        m.messageText = messageText;
-        m.Item = item;
+        MessageScript m = new MessageScript(item, messageText, messages.Count);
 
         messages.Add(m);
     }
@@ -83,23 +82,22 @@ public class GameManagerScript : MonoBehaviour
     private const string MESSAGE_SEPARATOR = "omegalol";
     private const string FIELD_SEPARATOR = "hajaxa";
     
-    
-    // TODO: Get all messages in the needed structure for creating the QR code
     private string GeneratePasswordFromMessages()
     {
         var password = "";
 
         foreach (var message in messages)
         {
-            password += message.creationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.messageText + MESSAGE_SEPARATOR;
+            password += message.m_CreationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.m_MessageText + MESSAGE_SEPARATOR;
         }
         
         return password;
     }
     
-    // TODO: Populate messages when reading
     private void InitMessagesFromPassword(string password)
     {
+        var messageItems = FindObjectsOfType<MessageItemScript>().ToList();
+        
         string[] rawMessages = password.Split(new string[] {MESSAGE_SEPARATOR}, StringSplitOptions.None);
 
         foreach (var rawMessage in rawMessages)
@@ -112,6 +110,12 @@ public class GameManagerScript : MonoBehaviour
             
             //TODO: Generate message
             Debug.Log(creationOrder + " " + itemName + " " + messageText);
+
+            var messageItem = messageItems.Find((script => script.name == itemName));
+            if (messageItem != null)
+            {
+                messages.Add(new MessageScript(messageItem, messageText, creationOrder));
+            }
         }
     }
 }
