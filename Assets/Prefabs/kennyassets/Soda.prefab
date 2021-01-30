@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _odaCan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 471f73a74a56c2045ac7e15e4f276f34, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 471f73a74a56c2045ac7e15e4f276f34, type: 3}
 --- !u!1 &1906177661820143676 stripped

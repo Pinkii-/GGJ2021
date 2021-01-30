@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat-ball
       objectReference: {fileID: 0}
+    - target: {fileID: 1063052857849554, guid: 9d6b3eb678ff24c81a7f772f730c54d5, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4197879441272304, guid: 9d6b3eb678ff24c81a7f772f730c54d5, type: 3}
       propertyPath: m_RootOrder
       value: 0

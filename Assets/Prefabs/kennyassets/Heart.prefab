@@ -100,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: heart
       objectReference: {fileID: 0}
+    - target: {fileID: 6448552892010714933, guid: 8737ed222298a474191b5b5de067bf10, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8737ed222298a474191b5b5de067bf10, type: 3}
 --- !u!4 &858083674356524360 stripped
