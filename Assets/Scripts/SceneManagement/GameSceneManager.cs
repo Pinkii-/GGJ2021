@@ -8,8 +8,14 @@ namespace SceneManagement
     public class GameSceneManager : MonoBehaviour
     {
         [SerializeField] private GameObject m_MenuRoot;
-        
+
+        private const string DEFAULT_PASSWORD = "0hajaxasofahajaxahey guys!";
         private const string GAMEPLAY_SCENE = "LogicTest";
+
+        public void PushDefaultFindGameplay()
+        {
+            PushFindGameplay(DEFAULT_PASSWORD);
+        }
         
         public void PushFindGameplay(string password)
         {

@@ -2292,8 +2292,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1187270792}
         m_TargetAssemblyTypeName: SceneManagement.GameSceneManager, Assembly-CSharp
-        m_MethodName: PushFindGameplay
-        m_Mode: 5
+        m_MethodName: PushDefaultFindGameplay
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
