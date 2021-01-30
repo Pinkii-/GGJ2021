@@ -108,7 +108,7 @@ public class MessageItemScript : MonoBehaviour
             case MessageItemState.ReadMessage: // TIP: remove this state to prevent opening already read messages
                 GameManagerScript.gameManagerRef.OnItemClicked(this);
                 if(itemSound != null && itemSound != "")
-                    AudioManager.audioManagerRef.PlaySound(itemSound);
+                    AudioManager.audioManagerRef.PlaySoundWithRandomPitch(itemSound);
                 break;
             default:
                 break;
