@@ -1,1 +1,0 @@
-rm -r Build/ && cp -r ../GGJ2021Build/* .
