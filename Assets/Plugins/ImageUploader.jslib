@@ -9,7 +9,7 @@ var ImageUploaderPlugin = {
                 this.value = null;
             };
             fileInput.onchange = function (event) {
-                SendMessage('LoadImageButton', 'FileSelected', URL.createObjectURL(event.target.files[0]));
+                SendMessage('LoadMessageButton', 'FileSelected', URL.createObjectURL(event.target.files[0]));
             }
             document.body.appendChild(fileInput);
         }
