@@ -6,7 +6,7 @@ public class MessageScript : MonoBehaviour
 {
     private MessageItemScript item;
 
-    public MessageItemScript Item 
+    public MessageItemScript Item
     {
         get { return item; }
         set { item = value; }
@@ -26,6 +26,13 @@ public class MessageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    public string GetItemName() 
+    {
+        if (item != null)
+            return item.name;
+        else
+            return "misingit";
     }
 }
