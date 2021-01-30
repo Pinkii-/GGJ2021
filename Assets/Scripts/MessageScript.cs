@@ -2,36 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MessageScript : MonoBehaviour
+public class MessageScript
 {
-    private MessageItemScript item;
+    private MessageItemScript m_Item;
 
     public MessageItemScript Item
     {
-        get { return item; }
-        set { item = value; }
+        get { return m_Item; }
+        set { m_Item = value; }
     }
 
-    public string messageText;
-    public string tempMessageText;
-    public int creationOrder;
+    public string m_MessageText = "";
+    public int m_CreationOrder = -1;
 
-    // Start is called before the first frame update
-    void Awake()
+
+    public MessageScript(MessageItemScript item, string messageText, int creationOrder)
     {
-        messageText = "";
-        tempMessageText = "";
+        m_Item = item;
+        m_MessageText = messageText;
+        m_CreationOrder = creationOrder;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
     public string GetItemName() 
     {
-        if (item != null)
-            return item.name;
+        if (m_Item != null)
+            return m_Item.name;
         else
             return "misingit";
     }
