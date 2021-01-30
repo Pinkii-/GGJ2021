@@ -21,6 +21,7 @@ namespace GameplayUI
         public void RequestWritableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
             SetGameplayUi(false);
+            m_MessageUI.gameObject.SetActive(true);
             m_MessageUI.InitAsWritableNote(originalContent, 
                 (password) =>
                 {
@@ -32,12 +33,12 @@ namespace GameplayUI
                     m_MessageUI.gameObject.SetActive(false);
                     SetGameplayUi(true);
                 });
-            m_MessageUI.gameObject.SetActive(true);
         }
         
         public void RequestReadableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
             SetGameplayUi(false);
+            m_MessageUI.gameObject.SetActive(true);
             m_MessageUI.InitAsReadableNote(originalContent, 
                 (password) =>
                 {
@@ -49,7 +50,6 @@ namespace GameplayUI
                     m_MessageUI.gameObject.SetActive(false);
                     SetGameplayUi(true);
                 });
-            m_MessageUI.gameObject.SetActive(true);
         }
 
         public void OpenQrPopup()
