@@ -444,9 +444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72c114dbcb3bb449939f554586f2507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PersonController: {fileID: 0}
   m_MessageUI: {fileID: 3212590190819893366}
   m_OverlayGameObject: {fileID: 6989425235793172028}
-  m_SendButtonController: {fileID: 1065643287063260035}
+  m_SendButton: {fileID: 1065643287063260035}
   m_QrPopup: {fileID: 4285188675003867458}
 --- !u!1 &2066880513516316878
 GameObject:

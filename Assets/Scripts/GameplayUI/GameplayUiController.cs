@@ -8,10 +8,13 @@ namespace GameplayUI
     {
         [Header("References")] 
         [SerializeField] private FirstPersonController m_PersonController;
+        [SerializeField] private CrosshairScript m_Crosshair;
+
+        
         [SerializeField] private MessageUI m_MessageUI;
 
         [SerializeField] private GameObject m_OverlayGameObject;
-        [SerializeField] private GameObject m_SendButtonController;
+        [SerializeField] private GameObject m_SendButton;
     
         [SerializeField] private QrPopup m_QrPopup;
 
@@ -63,10 +66,16 @@ namespace GameplayUI
             SetGameplayUi(true);
         }
 
+        public void OnAmountOfMemoriesChange(int amount)
+        {
+            m_SendButton.SetActive(amount > 0);
+        }
+        
         private void SetGameplayUi(bool b)
         {
             m_OverlayGameObject.SetActive(b);
             m_PersonController.enabled = b;
+            m_Crosshair.enabled = b;
         }
     }
 }
