@@ -9,16 +9,20 @@ namespace GameplayUI
         [Header("References")] 
         [SerializeField] private TMP_InputField m_InputField;
 
-        public void InitAsWritableNote(string originalContent)
+        private Action<string> m_OnSaveButtonClicked;
+
+        public void InitAsWritableNote(string originalContent, Action<string> onSubmitButtonClicked)
         {
             m_InputField.interactable = true;
             m_InputField.text = originalContent;
+            m_OnSaveButtonClicked = onSubmitButtonClicked;
         }
 
-        public void InitAsReadableNote(string content)
+        public void InitAsReadableNote(string content, Action<string> onSubmitButtonClicked)
         {
             m_InputField.interactable = false;
             m_InputField.text = content;
+            m_OnSaveButtonClicked = onSubmitButtonClicked;
         }
         
         public void OnCancelButtonPressed()
@@ -32,8 +36,7 @@ namespace GameplayUI
             // TODO: Animation? sound?
             gameObject.SetActive(false);
             
-            //TODO: set text to message
-            //GameManagerScript.gameManagerRef
+            m_OnSaveButtonClicked?.Invoke(m_InputField.text);
         }
 
         private void Update()

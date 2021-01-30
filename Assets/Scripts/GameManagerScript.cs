@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using GameplayUI;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
@@ -13,6 +14,9 @@ public class GameManagerScript : MonoBehaviour
         WriteMode
     }
 
+    [Header("References")] 
+    [SerializeField] private MessageUI m_MessageUI;
+    
     private GameManagerMode mode;
     // list of messages
     private List<MessageScript> messages;
@@ -108,7 +112,6 @@ public class GameManagerScript : MonoBehaviour
             var itemName = messageContent[1];
             var messageText = messageContent[2];
             
-            //TODO: Generate message
             Debug.Log(creationOrder + " " + itemName + " " + messageText);
 
             var messageItem = messageItems.Find((script => script.name == itemName));
@@ -117,5 +120,74 @@ public class GameManagerScript : MonoBehaviour
                 messages.Add(new MessageScript(messageItem, messageText, creationOrder));
             }
         }
+    }
+
+    public void OnItemClicked(MessageItemScript messageItemScript)
+    {
+        switch (Mode)
+        {
+            case GameManagerMode.Default:
+                throw new NotImplementedException();
+                break;
+            case GameManagerMode.ReadMode:
+                OnItemClickedInReadMode(messageItemScript);
+                break;
+            case GameManagerMode.WriteMode:
+                OnItemClickedInWriteMode(messageItemScript);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    private void OnItemClickedInWriteMode(MessageItemScript messageItemScript)
+    {
+        var item = messages.Find((message => message.Item == messageItemScript));
+        if (item != null)
+        {
+            m_MessageUI.InitAsWritableNote(item.m_MessageText, (newText) =>
+            {
+                if (string.IsNullOrEmpty(newText))
+                {
+                    messages.Remove(item);
+                }
+                else
+                {
+                    item.m_MessageText = newText;
+                }
+            });
+        }
+        else
+        {
+            m_MessageUI.InitAsWritableNote("", text =>
+            {
+                if (!string.IsNullOrEmpty(text))
+                {
+                    AddMessage(messageItemScript, text);
+                }
+            });
+        }
+    }
+
+    private void OnItemClickedInReadMode(MessageItemScript messageItemScript)
+    {
+        var item = messages.Find(message => message.Item == messageItemScript && !readMessages.Contains(message));
+        if (item != null)
+        {
+            readMessages.Add(item);
+            m_MessageUI.InitAsReadableNote(item.m_MessageText, _ =>
+            {
+                MarkMessageAsReaded(item);
+            });
+        }
+        else
+        {
+            //TODO: disable the click for this items (?)
+        }
+    }
+
+    private void MarkMessageAsReaded(MessageScript item)
+    {
+        //TODO: implement
     }
 }
