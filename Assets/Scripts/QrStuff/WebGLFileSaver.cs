@@ -9,7 +9,7 @@ namespace QrStuff
 
         public string m_filename;
 
-        public void SaveFile(string text)
+        public static void SaveFile(string text)
         {
             if (String.IsNullOrEmpty(text)) return;
 
