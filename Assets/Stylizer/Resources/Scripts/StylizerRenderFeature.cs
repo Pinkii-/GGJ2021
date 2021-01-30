@@ -135,7 +135,7 @@ public class StylizerRenderFeature : ScriptableRendererFeature
             context.renderTextureFactory = stylizer.m_RenderTextureFactory;
             context.materialFactory = stylizer.m_MaterialFactory;
             context.camera = cam;
-#if UNITY_EDITOR
+#if UNITY_EDITOR || true
 			var uberMaterial = stylizer.m_MaterialFactory.Get("Hidden/Post FX/Uber Shader_Grain");
 #else
 			var uberMaterial = ub;
@@ -169,7 +169,7 @@ public class StylizerRenderFeature : ScriptableRendererFeature
             context.renderTextureFactory = stylizer.m_RenderTextureFactory;
             context.materialFactory = stylizer.m_MaterialFactory;
             context.camera = cam;
-#if UNITY_EDITOR
+#if UNITY_EDITOR || true
 			var uberMaterial = stylizer.m_MaterialFactory.Get("Hidden/Post FX/Uber Shader_Grain");
 #else
 			var uberMaterial = ub;
