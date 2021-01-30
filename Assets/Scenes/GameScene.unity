@@ -43962,7 +43962,7 @@ MonoBehaviour:
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: ButtonClick
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 9bf8649db28ac4348a96b3baa0ecbf81, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -45139,6 +45139,10 @@ PrefabInstance:
     - target: {fileID: 291059112975044293, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
       propertyPath: m_Name
       value: FPSController
+      objectReference: {fileID: 0}
+    - target: {fileID: 291059112982615845, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dba3430a7a74e5429ea3779426df057, type: 3}
