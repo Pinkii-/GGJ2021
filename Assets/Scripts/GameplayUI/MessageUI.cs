@@ -16,6 +16,7 @@ namespace GameplayUI
             m_InputField.interactable = true;
             m_InputField.text = originalContent;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
+            gameObject.SetActive(true);
         }
 
         public void InitAsReadableNote(string content, Action<string> onSubmitButtonClicked)
@@ -23,6 +24,7 @@ namespace GameplayUI
             m_InputField.interactable = false;
             m_InputField.text = content;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
+            gameObject.SetActive(true);
         }
         
         public void OnCancelButtonPressed()

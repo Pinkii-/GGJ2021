@@ -40,7 +40,7 @@ public class GameManagerScript : MonoBehaviour
         readMessages = new List<MessageScript>();
 
         // TEMP TODO DELETE
-        //mode = GameManagerMode.WriteMode;
+        mode = GameManagerMode.WriteMode;
     }
 
     public void StartReadMode(string password)
@@ -153,6 +153,7 @@ public class GameManagerScript : MonoBehaviour
                 if (string.IsNullOrEmpty(newText))
                 {
                     messages.Remove(item);
+                    //TODO reset message item visual feedback and state
                 }
                 else
                 {
@@ -167,6 +168,8 @@ public class GameManagerScript : MonoBehaviour
                 if (!string.IsNullOrEmpty(text))
                 {
                     AddMessage(messageItemScript, text);
+                    // TODO change message item to written
+                    messageItemScript.MarkAsWritten();
                 }
             });
         }
@@ -181,18 +184,12 @@ public class GameManagerScript : MonoBehaviour
             readMessages.Add(item);
             m_MessageUI.InitAsReadableNote(item.m_MessageText, _ =>
             {
-                MarkMessageAsReaded(item);
+                messageItemScript.MarkAsRead(true);
             });
-            messageItemScript.MarkAsRead(true);
         }
         else
         {
             messageItemScript.MarkAsRead(false);
         }
-    }
-
-    private void MarkMessageAsReaded(MessageScript item)
-    {
-        //TODO: implement
     }
 }
