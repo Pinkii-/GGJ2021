@@ -9,7 +9,7 @@ namespace SceneManagement
     {
         [SerializeField] private GameObject m_MenuRoot;
 
-        private const string DEFAULT_PASSWORD = "0hajaxasofahajaxahey guys!";
+        private const string DEFAULT_PASSWORD = "0hajaxaSofahajaxahey guys!";
         private const string GAMEPLAY_SCENE = "LogicTest";
 
         public void PushDefaultFindGameplay()
