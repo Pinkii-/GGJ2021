@@ -43,11 +43,15 @@ public class GameManagerScript : MonoBehaviour
     {
         mode = GameManagerMode.ReadMode;
         InitMessagesFromPassword(password);
+        
+        m_GameplaUiController.OnGameManagerInit();
     }
 
     public void StartWriteMode()
     {
         mode = GameManagerMode.WriteMode;
+        
+        m_GameplaUiController.OnGameManagerInit();
     }
 
     public void AddMessage(MessageItemScript item, string messageText) 
