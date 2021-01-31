@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //AudioManager.audioManagerRef.PlaySound("ButtonClick");
+        AudioManager.audioManagerRef.PlaySound("MenuMusicLoop");
     }
 
     public void PlaySound(string name)
