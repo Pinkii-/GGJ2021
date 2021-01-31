@@ -9,7 +9,7 @@ namespace GameplayUI
         public Image m_QrVisualizer;
         private static readonly int MaterialTexture = Shader.PropertyToID("QrTexture");
 
-        private void Start()
+        private void OnEnable()
         {
             var password = GameManagerScript.gameManagerRef.GeneratePasswordFromMessages();
             var qrTexture = GenerateQr.generateQR(password);

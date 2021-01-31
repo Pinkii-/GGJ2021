@@ -106,6 +106,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4529150800084444789}
     m_Modifications:
+    - target: {fileID: 15512070810278994, guid: 143a550d8ee20734e8378023fba29edb, type: 3}
+      propertyPath: m_text
+      value: All memories have been found
+      objectReference: {fileID: 0}
     - target: {fileID: 2034234201612119600, guid: 143a550d8ee20734e8378023fba29edb, type: 3}
       propertyPath: m_Name
       value: GameplayUI
