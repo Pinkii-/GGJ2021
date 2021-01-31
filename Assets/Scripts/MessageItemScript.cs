@@ -154,7 +154,10 @@ public class MessageItemScript : MonoBehaviour
             addReadEffect();
         }
         else
+        {
             m_state = MessageItemState.ReadEmpty; // Dead end for this message item
+            AudioManager.audioManagerRef.PlaySoundWithRandomPitch("Checkmark");
+        }
 
     }
 

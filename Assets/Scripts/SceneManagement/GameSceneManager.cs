@@ -21,6 +21,8 @@ namespace SceneManagement
         public void Awake()
         {
             m_ThisSingletonMakesMeCry = this;
+
+            AudioManager.audioManagerRef.PlaySound("MenuMusicLoop"); // menu music
         }
 
         public void PushDefaultFindGameplay()
@@ -50,7 +52,12 @@ namespace SceneManagement
             }
 
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(GAMEPLAY_SCENE));
-            
+
+            // Change music and play ambience sound
+            AudioManager.audioManagerRef.StopSound("MenuMusicLoop"); // menu music
+            AudioManager.audioManagerRef.PlaySound("GameplayMusicLoop"); // gameplay music
+            AudioManager.audioManagerRef.PlaySound("AmbientSpeak");
+
             callback?.Invoke();
         }
 
@@ -68,6 +75,12 @@ namespace SceneManagement
         {
             SceneManager.UnloadSceneAsync(GAMEPLAY_SCENE);
             m_MenuRoot.SetActive(true);
+
+            // Stop ambience sound
+            AudioManager.audioManagerRef.StopSound("AmbientSpeak");
+            AudioManager.audioManagerRef.StopSound("GameplayMusicLoop"); // gameplay music
+            AudioManager.audioManagerRef.PlaySound("MenuMusicLoop"); // menu music
+
         }
     }
 }
