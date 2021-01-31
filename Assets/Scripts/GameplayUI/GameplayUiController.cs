@@ -15,6 +15,7 @@ namespace GameplayUI
 
         [SerializeField] private GameObject m_OverlayGameObject;
         [SerializeField] private GameObject m_SendButton;
+        [SerializeField] private FoundMessageCounter m_FoundMessageCounter;
     
         [SerializeField] private QrPopup m_QrPopup;
 
@@ -69,6 +70,7 @@ namespace GameplayUI
         public void OnAmountOfMemoriesChange(int amount)
         {
             m_SendButton.SetActive(amount > 0);
+            m_FoundMessageCounter.Refresh();
         }
         
         private void SetGameplayUi(bool b)
@@ -80,10 +82,15 @@ namespace GameplayUI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf)
+            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf && m_SendButton.activeSelf)
             {
                 OpenQrPopup();
             }
+        }
+
+        public void OnAmountOfViewedMemoriesChange()
+        {
+            m_FoundMessageCounter.Refresh();
         }
     }
 }
