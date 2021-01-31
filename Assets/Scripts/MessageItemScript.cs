@@ -20,6 +20,7 @@ public class MessageItemScript : MonoBehaviour
 
     public string itemSound;
     public GameObject particleSystemPrefab;
+    public GameObject particlePivot;
 
     public MessageItemState State
     {
@@ -63,9 +64,16 @@ public class MessageItemScript : MonoBehaviour
 
     private void enableParticleEffects() 
     {
+        Vector3 position;
+
+        if (particlePivot != null)
+            position = particlePivot.transform.position;
+        else
+            position = m_child.transform.position;
+
         if (m_highlightParticleSystem == null && particleSystemPrefab != null)
         {
-            m_highlightParticleSystem = Instantiate(particleSystemPrefab, m_child.transform.position, Quaternion.identity);
+            m_highlightParticleSystem = Instantiate(particleSystemPrefab, position, Quaternion.identity);
             m_highlightParticleSystem.transform.parent = transform;
         }
 
@@ -130,21 +138,22 @@ public class MessageItemScript : MonoBehaviour
 
     public void MarkAsRead(bool hasMessage)
     {
+        removeEffects();
+
         if (hasMessage)
         {
             m_state = MessageItemState.ReadMessage;
+            addReadEffect();
         }
         else
             m_state = MessageItemState.ReadEmpty; // Dead end for this message item
 
-        removeEffects();
-        addReadEffect();
     }
 
     public void MarkAsWritten()
     {
-        m_state = MessageItemState.Written;
         removeEffects();
+        m_state = MessageItemState.Written;
         addWrittenEffect();
     }
 
