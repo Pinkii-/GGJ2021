@@ -25,6 +25,32 @@ namespace GameplayUI
         
         [SerializeField] private GameObject m_ConfirmExit;
 
+        [SerializeField] private GameObject m_ReadTutorial;
+        [SerializeField] private GameObject m_WriteTutorial;
+
+        public void OnGameManagerInit()
+        {
+            var mode = GameManagerScript.gameManagerRef.Mode;
+
+            Debug.Log(mode);
+            
+            switch (mode)
+            {
+                case GameManagerScript.GameManagerMode.Default:
+                    break;
+                case GameManagerScript.GameManagerMode.ReadMode:
+                    m_ReadTutorial.SetActive(GameSceneManager.m_ThisSingletonMakesMeCry.m_ReadNeedTutorial);
+                    GameSceneManager.m_ThisSingletonMakesMeCry.m_ReadNeedTutorial = false;
+                    break;
+                case GameManagerScript.GameManagerMode.WriteMode:
+                    m_WriteTutorial.SetActive(GameSceneManager.m_ThisSingletonMakesMeCry.m_WriteNeedTutorial);
+                    GameSceneManager.m_ThisSingletonMakesMeCry.m_WriteNeedTutorial = false;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
         public void RequestWritableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
             SetGameplayUi(false);
