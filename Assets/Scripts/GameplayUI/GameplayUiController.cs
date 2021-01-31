@@ -1,5 +1,7 @@
 ﻿using System;
+using SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace GameplayUI
@@ -15,6 +17,7 @@ namespace GameplayUI
 
         [SerializeField] private GameObject m_OverlayGameObject;
         [SerializeField] private GameObject m_SendButton;
+        [SerializeField] private FoundMessageCounter m_FoundMessageCounter;
     
         [SerializeField] private QrPopup m_QrPopup;
 
@@ -69,6 +72,7 @@ namespace GameplayUI
         public void OnAmountOfMemoriesChange(int amount)
         {
             m_SendButton.SetActive(amount > 0);
+            m_FoundMessageCounter.Refresh();
         }
         
         private void SetGameplayUi(bool b)
@@ -80,10 +84,22 @@ namespace GameplayUI
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Return) && m_OverlayGameObject.activeSelf)
+            bool isInGameplayMode = m_OverlayGameObject.activeSelf;
+            if (!isInGameplayMode) return;
+            
+            if (Input.GetKeyDown(KeyCode.Return) && m_SendButton.activeSelf)
             {
                 OpenQrPopup();
             }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameSceneManager.m_ThisSingletonMakesMeCry.UnloadGameplayScene();
+            }
+        }
+
+        public void OnAmountOfViewedMemoriesChange()
+        {
+            m_FoundMessageCounter.Refresh();
         }
     }
 }

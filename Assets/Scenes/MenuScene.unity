@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Send Message
+  m_text: Send Memories
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Try the default experience
+  m_text: Find our memories
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -551,7 +551,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 697889744}
   m_LocalRotation: {x: -0, y: -0, z: 0.10640839, w: 0.99432254}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 679}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1892602372}
@@ -559,7 +559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 12.217}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -112, y: -50}
+  m_AnchoredPosition: {x: 987, y: -246}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697889746
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Our message to you >
+  m_text: (Look in the objects!)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.8
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 57.383423, z: 102.702484, w: 83.84833}
+  m_margin: {x: -92.09677, y: 57.383423, z: 102.702484, w: -76.68909}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find Message
+  m_text: Find Memories
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -1397,7 +1397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38, y: 0.3}
   m_AnchorMax: {x: 0.62, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: -84.99994}
+  m_AnchoredPosition: {x: -102, y: -48}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1382000389
@@ -1420,7 +1420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: or load a message you have received
+  m_text: "or \nLoad someone's memories "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -1447,7 +1447,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 57.35
+  m_fontSize: 62.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -112.69299, y: 61.34432, z: -324.386, w: 0}
+  m_margin: {x: -112.69299, y: 61.34432, z: -324.386, w: -27.083586}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1839,8 +1839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Find the lost parts of the message \n(They are attached to objects in
-    the room)"
+  m_text: "Find the lost parts of the memories \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e53316e13aaed3642a1eb916cd75323c, type: 2}
   m_sharedMaterial: {fileID: 1231923642172049415, guid: e53316e13aaed3642a1eb916cd75323c, type: 2}
@@ -1867,15 +1866,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.25
+  m_fontSize: 128.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 200
-  m_fontStyle: 0
+  m_fontStyle: 5
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2209,6 +2208,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &1772955265
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.633879
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0627637
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.36559
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380668, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fe5719936be392349ae0096b26c4ce63, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
 --- !u!1 &1828315708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,7 +2345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -93.99997}
+  m_AnchoredPosition: {x: 91, y: -93.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1832421434

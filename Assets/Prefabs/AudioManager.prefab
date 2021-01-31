@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6939540491341380668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6939540491341380666}
+  - component: {fileID: 6939540491341380669}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6939540491341380666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939540491341380668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.633879, y: 2.0627637, z: 3.36559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6939540491341380669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939540491341380668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450f53832fef9024cbc89d388ce86460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MenuMusicLoop
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: GameplayMusicLoop
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Ambience
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    outputAudioMixerGroup: {fileID: 6852260079111904175, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: PaperOpen
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: PaperClose
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 9bf8649db28ac4348a96b3baa0ecbf81, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: GlassBottle
+    clip: {fileID: 8300000, guid: 31b59c46aa54b6c4798accfcc953429b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Glass
+    clip: {fileID: 8300000, guid: 526618baf8ca33b41b22a0a061bdf9d8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Ceramic
+    clip: {fileID: 8300000, guid: a5b329a009e78fc49b451a63a189ce57, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: CeramicPlate
+    clip: {fileID: 8300000, guid: 591dd8c4fa9a26e4ab3636aee044f873, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    outputAudioMixerGroup: {fileID: 0}
+    source: {fileID: 0}

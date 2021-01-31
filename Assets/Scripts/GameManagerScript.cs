@@ -101,7 +101,7 @@ public class GameManagerScript : MonoBehaviour
 
         foreach (var message in messages)
         {
-            password += message.m_CreationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.m_MessageText + MESSAGE_SEPARATOR;
+            password += (password == "" ? "" : MESSAGE_SEPARATOR) + message.m_CreationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.m_MessageText;
         }
         
         return password;
@@ -120,8 +120,6 @@ public class GameManagerScript : MonoBehaviour
             int creationOrder = int.Parse(messageContent[0]);
             var itemName = messageContent[1];
             var messageText = messageContent[2];
-            
-            Debug.Log(creationOrder + " " + itemName + " " + messageText);
 
             var messageItem = messageItems.Find((script => script.name == itemName));
             if (messageItem != null)
@@ -129,6 +127,8 @@ public class GameManagerScript : MonoBehaviour
                 messages.Add(new MessageScript(messageItem, messageText, creationOrder));
             }
         }
+        
+        m_GameplaUiController.OnAmountOfViewedMemoriesChange();
     }
 
     public void OnItemClicked(MessageItemScript messageItemScript)
@@ -185,15 +185,41 @@ public class GameManagerScript : MonoBehaviour
         var item = messages.Find(message => message.Item == messageItemScript && !readMessages.Contains(message));
         if (item != null)
         {
-            readMessages.Add(item);
             m_GameplaUiController.RequestReadableMessageUi(item.m_MessageText, _ =>
             {
-                messageItemScript.MarkAsRead(true);
+                MarkAsRead(item);
             });
         }
         else
         {
             messageItemScript.MarkAsRead(false);
+        }
+    }
+
+    private void MarkAsRead(MessageScript message)
+    {
+        message.Item.MarkAsRead(true);
+        
+        if (!readMessages.Contains(message)) readMessages.Add(message);
+        
+        m_GameplaUiController.OnAmountOfViewedMemoriesChange();
+    }
+
+    public int GetTotalMessageCount()
+    {
+        return messages.Count;
+    }
+
+    public int GetViewedMessageCount()
+    {
+        switch (Mode)
+        {
+            case GameManagerMode.ReadMode:
+                return readMessages.Count;
+            case GameManagerMode.WriteMode:
+                return GetTotalMessageCount();
+            default:
+                throw new ArgumentOutOfRangeException();
         }
     }
 }
