@@ -58,7 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  itemSound: Wood
+  particleSystemPrefab: {fileID: 6529891447457299786, guid: 3c39ecd2f2bb0f14988f0dfbbd6950ab, type: 3}
+  particlePivot: {fileID: 0}
 --- !u!1001 &7515436692844152178
 PrefabInstance:
   m_ObjectHideFlags: 0

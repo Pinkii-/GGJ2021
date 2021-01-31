@@ -198,8 +198,8 @@ MonoBehaviour:
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: Guitar
+    clip: {fileID: 8300000, guid: 221e4b823ac95294f90093d6c18b5352, type: 3}
     volume: 1
     pitch: 1
     loop: 0
