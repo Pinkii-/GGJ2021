@@ -120,8 +120,6 @@ public class GameManagerScript : MonoBehaviour
             int creationOrder = int.Parse(messageContent[0]);
             var itemName = messageContent[1];
             var messageText = messageContent[2];
-            
-            Debug.Log(creationOrder + " " + itemName + " " + messageText);
 
             var messageItem = messageItems.Find((script => script.name == itemName));
             if (messageItem != null)

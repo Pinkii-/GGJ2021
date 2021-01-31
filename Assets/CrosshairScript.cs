@@ -44,7 +44,7 @@ public class CrosshairScript : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(FPSCamera.transform.position, FPSCamera.transform.forward, out hit, RaycastDistance, layerMask))
         {
-            MessageItemScript item = hit.transform.parent.GetComponent<MessageItemScript>();
+            MessageItemScript item = hit.transform.GetComponentInParent<MessageItemScript>();
 
             if (item == null) 
             {

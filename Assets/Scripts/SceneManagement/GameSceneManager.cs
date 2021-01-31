@@ -7,10 +7,17 @@ namespace SceneManagement
 {
     public class GameSceneManager : MonoBehaviour
     {
+        public static GameSceneManager m_ThisSingletonMakesMeCry;
+        
         [SerializeField] private GameObject m_MenuRoot;
 
         private const string DEFAULT_PASSWORD = "0hajaxaSofahajaxahey guys!";
         private const string GAMEPLAY_SCENE = "GameScene";
+
+        public void Awake()
+        {
+            m_ThisSingletonMakesMeCry = this;
+        }
 
         public void PushDefaultFindGameplay()
         {
@@ -51,6 +58,12 @@ namespace SceneManagement
         private void SetWriteMode()
         {
             GameManagerScript.gameManagerRef.StartWriteMode();
+        }
+
+        public void UnloadGameplayScene()
+        {
+            SceneManager.UnloadSceneAsync(GAMEPLAY_SCENE);
+            m_MenuRoot.SetActive(true);
         }
     }
 }

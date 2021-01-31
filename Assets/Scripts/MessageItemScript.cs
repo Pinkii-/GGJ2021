@@ -63,13 +63,14 @@ public class MessageItemScript : MonoBehaviour
 
     private void enableParticleEffects() 
     {
-        if (m_highlightParticleSystem == null)
+        if (m_highlightParticleSystem == null && particleSystemPrefab != null)
         {
             m_highlightParticleSystem = Instantiate(particleSystemPrefab, m_child.transform.position, Quaternion.identity);
             m_highlightParticleSystem.transform.parent = transform;
         }
 
-        m_highlightParticleSystem.SetActive(true);
+        if(m_highlightParticleSystem != null)
+            m_highlightParticleSystem.SetActive(true);
     }
 
     public void InCrosshair() 

@@ -47,11 +47,7 @@ namespace GameplayUI
         {
             if (m_InputField.isFocused) return;
 
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                OnCancelButtonPressed();
-            }
-            else if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 OnSaveButtonPressed();
             }
