@@ -182,7 +182,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void OnItemClickedInReadMode(MessageItemScript messageItemScript)
     {
-        var item = messages.Find(message => message.Item == messageItemScript && !readMessages.Contains(message));
+        var item = messages.Find(message => message.Item == messageItemScript);
         if (item != null)
         {
             m_GameplaUiController.RequestReadableMessageUi(item.m_MessageText, _ =>
@@ -203,6 +203,11 @@ public class GameManagerScript : MonoBehaviour
         if (!readMessages.Contains(message)) readMessages.Add(message);
         
         m_GameplaUiController.OnAmountOfViewedMemoriesChange();
+
+        if (messages.Count == readMessages.Count && Mode == GameManagerMode.ReadMode)
+        {
+            m_GameplaUiController.OnAllMemoriesRead();
+        }
     }
 
     public int GetTotalMessageCount()
