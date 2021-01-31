@@ -203,6 +203,11 @@ public class GameManagerScript : MonoBehaviour
         if (!readMessages.Contains(message)) readMessages.Add(message);
         
         m_GameplaUiController.OnAmountOfViewedMemoriesChange();
+
+        if (messages.Count == readMessages.Count && Mode == GameManagerMode.ReadMode)
+        {
+            m_GameplaUiController.OnAllMemoriesRead();
+        }
     }
 
     public int GetTotalMessageCount()

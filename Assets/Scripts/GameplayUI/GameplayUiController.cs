@@ -21,6 +21,8 @@ namespace GameplayUI
     
         [SerializeField] private QrPopup m_QrPopup;
 
+        [SerializeField] private GameObject m_AllMemoriesPrompt;
+
         public void RequestWritableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
             SetGameplayUi(false);
@@ -101,6 +103,11 @@ namespace GameplayUI
         public void OnAmountOfViewedMemoriesChange()
         {
             m_FoundMessageCounter.Refresh();
+        }
+
+        public void OnAllMemoriesRead()
+        {
+            m_AllMemoriesPrompt.SetActive(true);
         }
     }
 }
