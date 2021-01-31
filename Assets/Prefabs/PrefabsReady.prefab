@@ -162,7 +162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064823907}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.543, y: 0.072, z: -0}
+  m_LocalPosition: {x: 0.543, y: 0.315, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2383352006263483400}
@@ -3083,6 +3083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Painting
       objectReference: {fileID: 0}
+    - target: {fileID: 8622179380316764431, guid: f864c8e3801c6674d88b3b28d63d70a2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 700ae469e5be9ac4095d29b97116027a, type: 2}
     - target: {fileID: 8637338442473941361, guid: f864c8e3801c6674d88b3b28d63d70a2, type: 3}
       propertyPath: particleSystemPrefab
       value: 
