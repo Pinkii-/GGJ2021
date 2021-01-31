@@ -130,21 +130,22 @@ public class MessageItemScript : MonoBehaviour
 
     public void MarkAsRead(bool hasMessage)
     {
+        removeEffects();
+
         if (hasMessage)
         {
             m_state = MessageItemState.ReadMessage;
+            addReadEffect();
         }
         else
             m_state = MessageItemState.ReadEmpty; // Dead end for this message item
 
-        removeEffects();
-        addReadEffect();
     }
 
     public void MarkAsWritten()
     {
-        m_state = MessageItemState.Written;
         removeEffects();
+        m_state = MessageItemState.Written;
         addWrittenEffect();
     }
 
