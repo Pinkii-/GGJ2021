@@ -101,7 +101,7 @@ public class GameManagerScript : MonoBehaviour
 
         foreach (var message in messages)
         {
-            password += message.m_CreationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.m_MessageText + MESSAGE_SEPARATOR;
+            password += (password == "" ? "" : MESSAGE_SEPARATOR) + message.m_CreationOrder + FIELD_SEPARATOR + message.GetItemName() + FIELD_SEPARATOR + message.m_MessageText;
         }
         
         return password;
