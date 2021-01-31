@@ -44018,6 +44018,26 @@ PrefabInstance:
       propertyPath: m_PersonController
       value: 
       objectReference: {fileID: 205155812}
+    - target: {fileID: 2964869250215043607, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964869250215043607, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964869250215043607, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964869250215043607, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964869250215043607, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4529150800084444789, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
