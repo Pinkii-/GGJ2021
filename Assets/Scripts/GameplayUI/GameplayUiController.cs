@@ -22,6 +22,8 @@ namespace GameplayUI
         [SerializeField] private QrPopup m_QrPopup;
 
         [SerializeField] private GameObject m_AllMemoriesPrompt;
+        
+        [SerializeField] private GameObject m_ConfirmExit;
 
         public void RequestWritableMessageUi(string originalContent, Action<string> onSubmitButtonClicked)
         {
@@ -95,8 +97,7 @@ namespace GameplayUI
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
-                AudioManager.audioManagerRef.PlaySound("DoorClosed");
-                GameSceneManager.m_ThisSingletonMakesMeCry.UnloadGameplayScene();
+                ShowConfirmExit();
             }
         }
 
@@ -108,6 +109,18 @@ namespace GameplayUI
         public void OnAllMemoriesRead()
         {
             m_AllMemoriesPrompt.SetActive(true);
+        }
+
+        private void ShowConfirmExit()
+        {
+            SetGameplayUi(false);
+            m_ConfirmExit.SetActive(true);
+        }
+
+        public void HideConfirmExit()
+        {
+            SetGameplayUi(true);
+            m_ConfirmExit.SetActive(false);
         }
     }
 }
