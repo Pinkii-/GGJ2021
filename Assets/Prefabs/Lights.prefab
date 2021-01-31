@@ -240,7 +240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6296434080741778479
 Transform:
   m_ObjectHideFlags: 0
@@ -485,7 +485,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -577,7 +577,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 6296434081128707013}
   - component: {fileID: 6296434081128707010}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: tall_lamp_spot_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +617,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6296434081128707011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.086, y: 1.56, z: 0.6923077}
+  m_LocalPosition: {x: -11.086, y: 1.87, z: 0.6923077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6296434080359614923}
@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 6296434081772457385}
   - component: {fileID: 6296434081772457384}
   m_Layer: 0
-  m_Name: sofa_spot_light (1)
+  m_Name: records_spot_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,7 +801,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6296434081772457366}
   m_LocalRotation: {x: 0.9750679, y: -0, z: -0, w: 0.22190665}
-  m_LocalPosition: {x: -9.66, y: 1.49, z: -2.24}
+  m_LocalPosition: {x: -9.47, y: 1.64, z: -1.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6296434080359614923}
@@ -819,8 +819,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.1
-  m_Range: 1.93
+  m_Intensity: 0.2
+  m_Range: 2.46
   m_SpotAngle: 55.485992
   m_InnerSpotAngle: 37.721657
   m_CookieSize: 10
@@ -853,7 +853,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
