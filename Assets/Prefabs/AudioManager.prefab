@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MenuMusicLoop
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: fe5719936be392349ae0096b26c4ce63, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -58,22 +58,22 @@ MonoBehaviour:
     loop: 1
     outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: Ambience
-    clip: {fileID: 0}
+  - name: AmbientSpeak
+    clip: {fileID: 8300000, guid: c2d780152bd21eb46b1ca1e9efa3ecb7, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: 6852260079111904175, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: PaperOpen
-    clip: {fileID: 0}
+  - name: PaperSend
+    clip: {fileID: 8300000, guid: 6bd6f46cb96a5ea4ba2a46d708f4f6d4, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: PaperClose
-    clip: {fileID: 0}
+  - name: PaperTrash
+    clip: {fileID: 8300000, guid: a1e42b65df769474ebab162ff1856953, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -114,73 +114,108 @@ MonoBehaviour:
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Cardboard
+    clip: {fileID: 8300000, guid: 020fe3d566f422447830bef5549f31db, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
-    outputAudioMixerGroup: {fileID: 0}
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: CardboardBig
+    clip: {fileID: 8300000, guid: 57bc0b6023ccaa94d93d50f5ef2f6d83, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: DoorClosed
+    clip: {fileID: 8300000, guid: bfe28deabd6997443a010cb94d363de5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Keys
+    clip: {fileID: 8300000, guid: 327b4feb88d0bfb42855bff863fe6e6b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Metal
+    clip: {fileID: 8300000, guid: 87290d0af539e6241811de190630af31, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: MetalChain
+    clip: {fileID: 8300000, guid: 6d355c9463624194aae4818e587471e2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Notebook
+    clip: {fileID: 8300000, guid: 66e9e1cb5ba51f04d975f17990505f59, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Pen
+    clip: {fileID: 8300000, guid: ef993a3876826b049b2e097e44998f45, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Plastic
+    clip: {fileID: 8300000, guid: 912cdde73999b3b41bd8e0fe4e6bd046, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Slide
+    clip: {fileID: 8300000, guid: 7bc1ab3e75e1108418687c9a18de42f7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
+    source: {fileID: 0}
+  - name: Wood
+    clip: {fileID: 8300000, guid: d88754ad0a602054b8d5313b3006535e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: 
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
-    outputAudioMixerGroup: {fileID: 0}
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: 
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
-    outputAudioMixerGroup: {fileID: 0}
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: 
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
-    outputAudioMixerGroup: {fileID: 0}
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: 
     clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     loop: 0
-    outputAudioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    outputAudioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    outputAudioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    outputAudioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    outputAudioMixerGroup: {fileID: 0}
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
-    loop: 0
-    outputAudioMixerGroup: {fileID: 0}
+    outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
