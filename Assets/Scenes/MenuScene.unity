@@ -2439,9 +2439,33 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
-      propertyPath: sounds.Array.data[0].clip
+      propertyPath: sounds.Array.data[1].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 2b1e8608b05e5f94cae71faa1d482d1b, type: 3}
+      objectReference: {fileID: 8300000, guid: 49d253e727837a24487f51827f0dd16f, type: 3}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[21].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ee88cf88eb03e6f44a0e1ccafcdc6ada, type: 3}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[21].name
+      value: Checkmark
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939540491341380669, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
+      propertyPath: sounds.Array.data[21].volume
+      value: 0.025
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
 --- !u!1 &1828315708

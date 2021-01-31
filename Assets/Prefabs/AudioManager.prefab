@@ -45,22 +45,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: MenuMusicLoop
-    clip: {fileID: 8300000, guid: fe5719936be392349ae0096b26c4ce63, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 2b1e8608b05e5f94cae71faa1d482d1b, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: GameplayMusicLoop
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 49d253e727837a24487f51827f0dd16f, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: AmbientSpeak
     clip: {fileID: 8300000, guid: c2d780152bd21eb46b1ca1e9efa3ecb7, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: 6852260079111904175, guid: 527404e060b096247a6b780a03622e69, type: 2}
@@ -191,9 +191,9 @@ MonoBehaviour:
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 1
+  - name: Checkmark
+    clip: {fileID: 8300000, guid: ee88cf88eb03e6f44a0e1ccafcdc6ada, type: 3}
+    volume: 0.025
     pitch: 1
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
