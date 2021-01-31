@@ -2088,6 +2088,7 @@ GameObject:
   - component: {fileID: 1602726895}
   - component: {fileID: 1602726894}
   - component: {fileID: 1602726893}
+  - component: {fileID: 1602726896}
   m_Layer: 5
   m_Name: Consume Click
   m_TagString: Untagged
@@ -2207,6 +2208,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602726891}
   m_CullTransparentMesh: 0
+--- !u!114 &1602726896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602726891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: DoorClosed
 --- !u!1 &1729142077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2234,6 @@ GameObject:
   - component: {fileID: 1729142080}
   - component: {fileID: 1729142079}
   - component: {fileID: 1729142082}
-  - component: {fileID: 1729142083}
   m_Layer: 5
   m_Name: LoadMessageButton
   m_TagString: Untagged
@@ -2368,19 +2381,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1729142083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729142077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Sound: DoorClosed
 --- !u!1001 &1772955265
 PrefabInstance:
   m_ObjectHideFlags: 0
