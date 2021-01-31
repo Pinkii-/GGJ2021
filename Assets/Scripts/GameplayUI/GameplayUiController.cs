@@ -93,6 +93,7 @@ namespace GameplayUI
             }
             else if (Input.GetKeyDown(KeyCode.Escape))
             {
+                AudioManager.audioManagerRef.PlaySound("DoorClosed");
                 GameSceneManager.m_ThisSingletonMakesMeCry.UnloadGameplayScene();
             }
         }
