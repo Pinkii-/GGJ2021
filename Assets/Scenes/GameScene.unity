@@ -23236,6 +23236,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1288490478}
+    - target: {fileID: 4529150800084444791, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529150800084444791, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4529150800084444791, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 4529150800084444793, guid: 782b648940fc45340bb1f7fd900edf28, type: 3}
       propertyPath: m_Name
       value: CanvasUI
