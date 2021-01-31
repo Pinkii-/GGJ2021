@@ -6,13 +6,17 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager audioManagerRef;
+    public static AudioManager audioManagerRef = null;
 
     // list of gameplay sounds
     public Sound[] sounds;
     void Awake()
     {
-        audioManagerRef = this;
+        if (audioManagerRef == null)
+        {
+            audioManagerRef = this;
+            DontDestroyOnLoad(this);
+        }
 
         // Initializing gameplay sounds
         foreach (Sound s in sounds)

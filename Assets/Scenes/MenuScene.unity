@@ -1361,7 +1361,7 @@ Transform:
   - {fileID: 2031956137}
   - {fileID: 1129697455}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382000387
 GameObject:
@@ -1650,6 +1650,7 @@ GameObject:
   - component: {fileID: 1459656810}
   - component: {fileID: 1459656809}
   - component: {fileID: 1459656808}
+  - component: {fileID: 1459656811}
   m_Layer: 5
   m_Name: FindMessageButton
   m_TagString: Untagged
@@ -1782,6 +1783,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1459656811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459656806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: ButtonClick
 --- !u!1 &1529151792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,6 +1942,7 @@ GameObject:
   - component: {fileID: 1547629138}
   - component: {fileID: 1547629137}
   - component: {fileID: 1547629136}
+  - component: {fileID: 1547629139}
   m_Layer: 5
   m_Name: SendMessageButton
   m_TagString: Untagged
@@ -2048,6 +2063,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1547629139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547629134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: ButtonClick
 --- !u!1 &1729142077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,6 +2089,7 @@ GameObject:
   - component: {fileID: 1729142080}
   - component: {fileID: 1729142079}
   - component: {fileID: 1729142082}
+  - component: {fileID: 1729142083}
   m_Layer: 5
   m_Name: LoadMessageButton
   m_TagString: Untagged
@@ -2208,6 +2237,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1729142083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729142077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: ButtonClick
 --- !u!1001 &1772955265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2217,7 +2259,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6939540491341380666, guid: 160a1d72db9da4e41ad6d74ca067a120, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2322,6 +2364,7 @@ GameObject:
   - component: {fileID: 1832421436}
   - component: {fileID: 1832421435}
   - component: {fileID: 1832421434}
+  - component: {fileID: 1832421437}
   m_Layer: 5
   m_Name: Back Button
   m_TagString: Untagged
@@ -2453,6 +2496,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832421432}
   m_CullTransparentMesh: 0
+--- !u!114 &1832421437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832421432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: ButtonClick
 --- !u!1 &1838064518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2613,7 @@ GameObject:
   - component: {fileID: 1892602375}
   - component: {fileID: 1892602374}
   - component: {fileID: 1892602373}
+  - component: {fileID: 1892602376}
   m_Layer: 5
   m_Name: PlayDefaultMessageButton
   m_TagString: Untagged
@@ -2678,6 +2735,19 @@ MonoBehaviour:
           m_StringArgument: lol
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1892602376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892602371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d25d332f30ac3e046b9205b0b681bf16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Sound: ButtonClick
 --- !u!1 &1910499072
 GameObject:
   m_ObjectHideFlags: 0
