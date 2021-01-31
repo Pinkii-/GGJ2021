@@ -1,17 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using ZXing;
 
 namespace QrStuff
 {
-    public class LoadFile : MonoBehaviour
+    [RequireComponent(typeof(Button))]
+    public class LoadFile : MonoBehaviour, IPointerClickHandler
     {
         private string m_FilePath;
         public UnityEvent<string> m_OnQrLoaded;
- 
+
+
         [DllImport("__Internal")]
         private static extern void ImageUploaderCaptureClick();
         
@@ -51,6 +56,14 @@ namespace QrStuff
                         Debug.Log("Not being able to read QR");
                     }
                 }
+            }
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (eventData.button == PointerEventData.InputButton.Left)
+            {
+                OnButtonPointerDown();
             }
         }
     }

@@ -32,13 +32,14 @@ namespace GameplayUI
         
         public void OnCancelButtonPressed()
         {
-            // TODO: Animation? sound?
+            AudioManager.audioManagerRef.PlaySound("PaperSend");
+            
             m_OnCancelButtonClicked?.Invoke();
         }
 
         public void OnSaveButtonPressed()
         {
-            // TODO: Animation? sound?
+            AudioManager.audioManagerRef.PlaySoundWithRandomPitch("PaperSend");
             
             m_OnSaveButtonClicked?.Invoke(m_InputField.text.Trim(' ', '\r', '\n'));
         }
