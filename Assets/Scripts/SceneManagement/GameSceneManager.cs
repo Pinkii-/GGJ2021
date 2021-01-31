@@ -14,6 +14,10 @@ namespace SceneManagement
         private const string DEFAULT_PASSWORD = "0hajaxaSofahajaxahey guys!";
         private const string GAMEPLAY_SCENE = "GameScene";
 
+        public bool m_ReadNeedTutorial = true;
+        public bool m_WriteNeedTutorial = true;
+
+
         public void Awake()
         {
             m_ThisSingletonMakesMeCry = this;
