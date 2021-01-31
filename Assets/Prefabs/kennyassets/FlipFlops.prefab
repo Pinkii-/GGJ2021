@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &2781508750461096318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2214846021145213781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28391883, y: 0.0432864, z: 0.33160913}
+  m_Center: {x: 0.00000047683716, y: 0.01983949, z: -0.0020232573}
 --- !u!1 &6152477427252633489
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 6152477427252633489}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.34, y: 0.05, z: 8.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4564, y: 1.4564, z: 1.4564}
   m_Children:
   - {fileID: 2211565132572682739}
   m_Father: {fileID: 0}
@@ -44,8 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSound: 
+  itemSound: Cardboard
   particleSystemPrefab: {fileID: 6529891447457299786, guid: d94d71d08ec385549808ca28168dba3d, type: 3}
+  particlePivot: {fileID: 0}
 --- !u!1001 &2215554660804895111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,6 +121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ef0af7119d54614c81b0d5d2b45bdc1, type: 3}
+--- !u!1 &2214846021145213781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010308164306, guid: 7ef0af7119d54614c81b0d5d2b45bdc1, type: 3}
+  m_PrefabInstance: {fileID: 2215554660804895111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2211565132572682739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010234415220, guid: 7ef0af7119d54614c81b0d5d2b45bdc1, type: 3}

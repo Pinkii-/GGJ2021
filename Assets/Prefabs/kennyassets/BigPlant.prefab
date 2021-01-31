@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!64 &8170768801230590885
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574902708725601698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 46604309741045415, guid: c126414cb9b4cdd4faea84809d862e10, type: 3}
 --- !u!65 &785904468686181908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11,22 +25,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25736547, y: 0.36456, z: 0.29718}
-  m_Center: {x: 0, y: 0.18228, z: 0}
---- !u!64 &8170768801230590885
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574902708725601698}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 46604309741045415, guid: c126414cb9b4cdd4faea84809d862e10, type: 3}
+  m_Size: {x: 0.25736547, y: 1, z: 0.29718}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!1 &8499229100793602507
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSound: 
+  itemSound: Cardboard
+  particleSystemPrefab: {fileID: 6529891447457299786, guid: 3c39ecd2f2bb0f14988f0dfbbd6950ab, type: 3}
+  particlePivot: {fileID: 0}
 --- !u!1001 &7623248507978037963
 PrefabInstance:
   m_ObjectHideFlags: 0

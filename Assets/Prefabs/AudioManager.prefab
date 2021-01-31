@@ -46,14 +46,14 @@ MonoBehaviour:
   sounds:
   - name: MenuMusicLoop
     clip: {fileID: 8300000, guid: 2b1e8608b05e5f94cae71faa1d482d1b, type: 3}
-    volume: 0.6
+    volume: 0.4
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
   - name: GameplayMusicLoop
     clip: {fileID: 8300000, guid: 49d253e727837a24487f51827f0dd16f, type: 3}
-    volume: 0.6
+    volume: 0.4
     pitch: 1
     loop: 1
     outputAudioMixerGroup: {fileID: -727039363523311737, guid: 527404e060b096247a6b780a03622e69, type: 2}
@@ -198,8 +198,8 @@ MonoBehaviour:
     loop: 0
     outputAudioMixerGroup: {fileID: 1711195065890942447, guid: 527404e060b096247a6b780a03622e69, type: 2}
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: Guitar
+    clip: {fileID: 8300000, guid: 221e4b823ac95294f90093d6c18b5352, type: 3}
     volume: 1
     pitch: 1
     loop: 0

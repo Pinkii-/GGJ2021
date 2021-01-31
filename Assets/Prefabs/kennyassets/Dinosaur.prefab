@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7323487613990828213}
   - component: {fileID: 5630987880678507281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: stegosaurus_unscaled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemSound: Cardboard
+  particleSystemPrefab: {fileID: 6529891447457299786, guid: d94d71d08ec385549808ca28168dba3d, type: 3}
+  particlePivot: {fileID: 0}
 --- !u!1001 &5298872914520597753
 PrefabInstance:
   m_ObjectHideFlags: 0

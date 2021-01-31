@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.39
+      value: -6.21
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3015869
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.47060394
+      value: -3.350604
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29,15 +29,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3266021896954031249, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57,11 +57,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992088569270284344, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_Name
-      value: PinkRecord
+      value: PinkRecord Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5802937255274966758, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7042df1a3ffaea44185b96789336382c, type: 2}
+    - target: {fileID: 8062242057172370172, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}
+      propertyPath: itemSound
+      value: Plastic
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec61222c08dadf646a7a5c249da3f9be, type: 3}

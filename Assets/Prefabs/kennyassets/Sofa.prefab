@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac6c04b76996f7458d55e7fc3b97883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  itemSound: CardboardBig
+  particleSystemPrefab: {fileID: 6529891447457299786, guid: cf8f6a285091d2d47a7a62a084ac46a3, type: 3}
+  particlePivot: {fileID: 0}
 --- !u!1001 &7850372008477385063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74,7 +76,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4899835161581690, guid: 3cc0090ec9d814580b3521b17fcd3ecf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.1300004
+      value: 3.18
       objectReference: {fileID: 0}
     - target: {fileID: 4899835161581690, guid: 3cc0090ec9d814580b3521b17fcd3ecf, type: 3}
       propertyPath: m_LocalRotation.w
