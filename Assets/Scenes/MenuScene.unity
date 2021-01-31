@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Send Message
+  m_text: Send Memories
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find Message
+  m_text: Find Memories
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
   m_sharedMaterial: {fileID: -5274364535762442469, guid: a0106cbd779494f4388a981b993ee75d, type: 2}
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Find the lost parts of the message \n"
+  m_text: "Find the lost parts of the memories \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e53316e13aaed3642a1eb916cd75323c, type: 2}
   m_sharedMaterial: {fileID: 1231923642172049415, guid: e53316e13aaed3642a1eb916cd75323c, type: 2}
