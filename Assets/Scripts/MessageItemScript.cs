@@ -16,8 +16,10 @@ public class MessageItemScript : MonoBehaviour
 
     private MessageItemState m_state;
     private GameObject m_child;
+    private GameObject m_highlightParticleSystem;
 
     public string itemSound;
+    public GameObject particleSystemPrefab;
 
     public MessageItemState State
     {
@@ -31,33 +33,43 @@ public class MessageItemScript : MonoBehaviour
 
     private void removeEffects()
     {
-        // TODO TEMP
-        m_child.transform.localScale = new Vector3(1f, 1f, 1f);
+        if(m_highlightParticleSystem != null)
+            m_highlightParticleSystem.SetActive(false);
+        //m_child.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     private void addReadHighlightEffect()
     {
-        // TODO TEMP
-        m_child.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        enableParticleEffects();
     }
 
     private void addWriteHighlightEffect()
     {
-        // TODO TEMP
-        m_child.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        enableParticleEffects();
     }
 
     private void addReadEffect()
     {
-        // TODO add the read highlight if ReadMessage. Golden?
+        // TODO add the read highlight. Golden?
         // TEMP
-        m_child.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        enableParticleEffects();
     }
     private void addWrittenEffect()
     {
         // TODO add the read highlight. Golden?
         // TEMP
-        m_child.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        enableParticleEffects();
+    }
+
+    private void enableParticleEffects() 
+    {
+        if (m_highlightParticleSystem == null)
+        {
+            m_highlightParticleSystem = Instantiate(particleSystemPrefab, m_child.transform.position, Quaternion.identity);
+            m_highlightParticleSystem.transform.parent = transform;
+        }
+
+        m_highlightParticleSystem.SetActive(true);
     }
 
     public void InCrosshair() 
