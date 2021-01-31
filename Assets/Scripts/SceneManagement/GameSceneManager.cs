@@ -21,7 +21,9 @@ namespace SceneManagement
         public void Awake()
         {
             m_ThisSingletonMakesMeCry = this;
-
+        }
+        public void Start()
+        {
             AudioManager.audioManagerRef.PlaySound("MenuMusicLoop"); // menu music
         }
 

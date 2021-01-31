@@ -34,8 +34,12 @@ public class MessageItemScript : MonoBehaviour
 
     private void removeEffects()
     {
-        if(m_highlightParticleSystem != null)
-            m_highlightParticleSystem.SetActive(false);
+        if (m_highlightParticleSystem != null) 
+        {
+
+         m_highlightParticleSystem.SetActive(false);
+
+        }
         //m_child.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
@@ -52,14 +56,18 @@ public class MessageItemScript : MonoBehaviour
     private void addReadEffect()
     {
         // TODO add the read highlight. Golden?
-        // TEMP
         enableParticleEffects();
+        ParticleSystem.MainModule settings = m_highlightParticleSystem.GetComponent<ParticleSystem>().main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(new Color(1, 0.8f, 0, 1f));
+        settings.startSizeMultiplier = 0.25f;
     }
     private void addWrittenEffect()
     {
         // TODO add the read highlight. Golden?
-        // TEMP
         enableParticleEffects();
+        ParticleSystem.MainModule settings = m_highlightParticleSystem.GetComponent<ParticleSystem>().main;
+        settings.startColor = new ParticleSystem.MinMaxGradient(new Color(1, 0.8f, 0, 1f));
+        settings.startSizeMultiplier = 0.25f;
     }
 
     private void enableParticleEffects() 
