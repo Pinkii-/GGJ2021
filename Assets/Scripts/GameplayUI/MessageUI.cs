@@ -18,7 +18,7 @@ namespace GameplayUI
             m_InputField.text = originalContent;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
             m_OnCancelButtonClicked = onCancelButtonClicked;
-            m_InputField.Select();
+            m_InputField.ActivateInputField();
         }
 
         public void InitAsReadableNote(string content, Action<string> onSubmitButtonClicked, Action onCancelButtonClicked)
@@ -27,7 +27,7 @@ namespace GameplayUI
             m_InputField.text = content;
             m_OnSaveButtonClicked = onSubmitButtonClicked;
             m_OnCancelButtonClicked = onCancelButtonClicked;
-            m_InputField.Select();
+            m_InputField.ActivateInputField();
         }
         
         public void OnCancelButtonPressed()
