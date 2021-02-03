@@ -19,7 +19,7 @@ namespace QrStuff
         
             var image_url = "data:image/png;base64," + encodedText;
         
-            SaveScreenshotWebGL("lol.png", image_url);
+            SaveScreenshotWebGL("memories.png", image_url);
         }
     
         [DllImport("__Internal")]
